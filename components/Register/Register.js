@@ -21,8 +21,8 @@ export default function Register() {
             <br/>
             <input class='mt-10' type='email' placeholder='Email'/>
             <br/>
-            <div class='h-10 w-32 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>
-                <button onClick={()=>navigate('/Home')}class='mt-1'>Confirm</button>
+            <div>
+                <button onClick={()=>navigate('/Home')} class='h-10 w-32 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Confirm</button>
             </div>
         </div>
     </div>

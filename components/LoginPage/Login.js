@@ -15,8 +15,8 @@ export default function Login() {
             <br/>
             <input class='mt-10' type='password' placeholder='Password'/>
             <br/>
-            <div class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl '>
-                <button onClick={()=>navigate('/Home')} class='mt-1'>Login</button>
+            <div >
+                <button onClick={()=>navigate('/Home')} class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Login</button>
             </div>
             <br/>
             <button class=' text-xs text-light-red'>Forget password or email ?</button>
