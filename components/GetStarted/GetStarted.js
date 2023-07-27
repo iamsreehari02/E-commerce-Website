@@ -10,14 +10,14 @@ export default function GetStarted() {
   const navigate = useNavigate();
   return (
     <div>
-      <div class="h-auto w-screen border bg-greyish-yellow">
-        <div class="h-50 w-96 ml-auto mr-auto mt-64">
+      <div class="h-screen w-screen border bg-greyish-yellow">
+        <div>
           
-          <img src={MainLogo} class='h-50 w-50' alt='logo'/>  
+          <img src={MainLogo} class='h-50 w-50 ml-auto mr-auto' alt='logo'/>  
         
         </div>
-        <div class="h-96 w-96 ml-auto mr-auto mb-64">
-          <img src={GetBut} button onClick={()=>navigate('/edit-profile')} class='h-40 w-40 text-white ml-auto mr-auto' alt='Button'/>
+        <div>
+          <img src={GetBut} button onClick={()=>navigate('/edit-profile')} class='h-40 w-40 text-white ml-auto mr-auto mb-9' alt='Button'/>
         </div>
       </div>
     </div>
