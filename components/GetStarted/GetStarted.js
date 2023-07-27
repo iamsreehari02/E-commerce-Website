@@ -1,10 +1,8 @@
 import React from "react";
 import MainLogo from '../../assets/Rectangle 42.svg'
-import VectorLogo from '../../assets/Vector.jpg'
 import { useNavigate } from "react-router-dom";
 import GetBut from '../../assets/Butt.svg'
 // import './GetStarted.css'
-import { Link } from "react-router-dom";
 
 
 export default function GetStarted() {
