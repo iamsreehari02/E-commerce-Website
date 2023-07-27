@@ -3,8 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import GetStarted from './components/GetStarted/GetStarted';
 import EditProfile from './components/EditProfile/EditProfile';
-import Login from './components/Login/Login';
+
 import Register from './components/Register/Register';
+import Login from './components/LoginPage/Login';
+import Home from './components/HomePage/Home';
 
 
 
@@ -13,9 +15,10 @@ function App() {
     <div>
       
         <Routes>
-          <Route path='/edit-profile' element={<EditProfile/>}/>
-          <Route path='/Log-in' element={<Login/>}/>
+          <Route path='/Edit-profile' element={<EditProfile/>}/>
+          <Route path='/Login' element={<Login/>}/>
           <Route path='/Register' element={<Register/>}/>
+          <Route path='/Home' element={<Home/>}/>
         </Routes>
         
       

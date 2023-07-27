@@ -25,8 +25,8 @@ export default function EditProfile() {
        <div> 
         <img src={ProfileMiniLogo} class='w-14 h-14 ml-auto mr-auto mt-6' alt='Profile'/>
        </div>
-       <div class='h-6 w-10 mt-1 ml-auto mr-auto text-fading-black'>
-          <button onClick={()=>navigate('/Login')}>Login</button>
+       <div class='h-6 w-10 mt-1 ml-auto mr-auto'>
+          <button onClick={()=>navigate('/Login')} class='text-fading-black'>Login</button>
        </div>
        <div class='w-10 h-10 mt-7 ml-auto mr-auto'>
         <img src={RegLogo} alt='Register'/>
