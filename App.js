@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import GetStarted from './components/GetStarted/GetStarted';
+import EditProfile from './components/EditProfile/EditProfile';
+
 
 
 function App() {
   return (
     <div>
-      {<GetStarted/>}
+        <Routes>
+          <Route path='/edit-profile' element={<EditProfile/>}/>
+        </Routes>
+        {/* {<GetStarted/>} */}
+      
     </div>
   );
 }

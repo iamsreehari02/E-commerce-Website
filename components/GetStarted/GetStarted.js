@@ -1,30 +1,28 @@
 import React from "react";
+import MainLogo from '../../assets/Rectangle 42.svg'
+import VectorLogo from '../../assets/Vector.jpg'
+import { useNavigate } from "react-router-dom";
+import GetBut from '../../assets/Butt.svg'
 // import './GetStarted.css'
-import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 export default function GetStarted() {
 
-  const navigate = useNavigate()
-  
-  const handleNavigate = (str)=>{
-    navigate(str)
-  } 
+  const navigate = useNavigate();
   return (
     <div>
-      <div class="h-screen w-768px border bg-greyish-yellow">
-        <div class="h-50 w-96 ml-auto mr-auto mt-40 flex justify-center">
-          <div>
-          <img src='./assets/Rectangle 42.svg' class='h-50 w-50' alt='logo'/>  
-          <h1>Spring Break</h1>
-          </div>
+      <div class="h-auto w-screen border bg-greyish-yellow">
+        <div class="h-50 w-96 ml-auto mr-auto mt-64">
+          
+          <img src={MainLogo} class='h-50 w-50' alt='logo'/>  
+        
         </div>
-        <div class="h-10 w-40 rounded-lg bg-black ml-auto mr-auto flex align middle justify-center mt-20">
-          <button class="text-white" onClick={()=>handleNavigate('EditProfile')}>Get Started</button>
-          <div class="h-7 w-7 rounded-full border border-white-800 ml-6">
-            <img src="./assets/Vector(3).svg" alt="vector" />
-          </div>
+        <div class="h-96 w-96 ml-auto mr-auto mb-64">
+          <img src={GetBut} button onClick={()=>navigate('/edit-profile')} class='h-40 w-40 text-white ml-auto mr-auto' alt='Button'/>
         </div>
       </div>
     </div>
   );
 }
+
