@@ -13,17 +13,20 @@ export default function Register() {
             <h1 class='text-light-red text-3xl '>Register</h1>
         </div>
         <div class='text-center '>
-            <input type='text' placeholder='First Name'/>
-            <br/>
-            <input class='mt-10' type='text' placeholder='Last Name'/>
-            <br/>
-            <input class='mt-10' type='number' placeholder='Mobile Number'/>
-            <br/>
-            <input class='mt-10' type='email' placeholder='Email'/>
-            <br/>
-            <div>
-                <button onClick={()=>navigate('/Home')} class='h-10 w-32 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Confirm</button>
-            </div>
+           
+                <input type='text' placeholder='First Name'/>
+                <br/>
+                <input class='mt-10' type='text' placeholder='Last Name'/>
+                <br/>
+                <input class='mt-10' type='number' placeholder='Mobile Number'/>
+                <br/>
+                <input class='mt-10' type='email' placeholder='Email'/>
+                <br/>
+                <div>
+                    <button onClick={()=>navigate('/Home')} class='h-10 w-32 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Confirm</button>
+                </div>
+          
+            
         </div>
     </div>
   )
