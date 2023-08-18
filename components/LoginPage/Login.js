@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { auth } from '../../firebase'
+import {signInWithEmailAndPassword} from 'firebase/auth'
+import AuthDetails from '../../AuthDetails'
 
-export default function Login() {
+    const Login =() => {
 
     const navigate = useNavigate()
+
+    const [email , setEmail] = useState('')
+    const [password , setPassword] = useState('')
+
+    const login = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth , email , password)
+        .then((userCredentials) => console.log(userCredentials))
+        .catch((error) => console.log(error))
+
+    }
 
   return (
     <div class='h-screen w-screen bg-page-color pt-20'>
@@ -11,19 +25,28 @@ export default function Login() {
             <h1 class='text-fading-black text-3xl'>Login Here</h1>
         </div>
         <div class='text-center'>
-            <input type='email' placeholder ='Email'/>
-            <br/>
-            <input class='mt-10' type='password' placeholder='Password'/>
-            <br/>
-            <div >
-                <button onClick={()=>navigate('/Home')} class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Login</button>
-            </div>
+            <form onSubmit={login}>
+                <input type='email' value={email}  
+                onChange={(e) => setEmail(e.target.value)}
+                required placeholder ='Email'/>
+                <br/>
+                <input class='mt-10' type='password' value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required placeholder='Password'/>
+                <br/>
+                <div >
+                    <button type='submit' class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Login</button>
+                </div>
+            </form>
             <br/>
             <button class=' text-xs text-light-red'>Forget password or email ?</button>
         </div>
+        <AuthDetails/>
         
 
       
     </div>
   )
+
 }
+export default Login

@@ -1,10 +1,9 @@
 import React from 'react'
 
-const CasualWear= ()=> {
+export default function Cart() {
   return (
     <div>
-      
+      heyloooooooo
     </div>
   )
 }
-export default CasualWear

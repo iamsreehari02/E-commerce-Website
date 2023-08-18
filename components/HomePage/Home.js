@@ -5,13 +5,9 @@ import Product2 from '../../assets/Product2.svg'
 import Product3 from '../../assets/Product3.svg'
 import Product4 from '../../assets/Product4.svg'
 import ProductList from '../ProductList/ProductList'
-import CasualWear from '../CasualWear/CasualWear'
-import SummerWear from '../SummerWear/SummerWear'
-import Seasonal from '../Seasonal/Seasonal'
 import MensWear from '../MensWear/MensWear'
 import Category from '../Category/Category'
 import WomenWear from '../WomenWear/WomenWear'
-import FormalsPage from '../Formals/FormalsPage'
 import Header from '../Header/Header'
 
 
@@ -21,11 +17,11 @@ export default function Home() {
   
 
   const [categoryData, catChange] = useState([
-    {'id' : 'Formals' , 'link' : FormalsPage,},
-    {'id' : 'Casuals', 'link' : CasualWear },
-    {'id' : 'Seasonal', 'link' : Seasonal },
-    {'id' : 'Men' , 'link' : MensWear},
-    {'id' : 'Women' , 'link' : WomenWear}
+    {'id' : '1' , 'name' : 'Formals' , 'direct' : '/FormalsPage'},
+    {'id' : '2', 'name' : 'Casuals', 'direct' : '/CasualsPage' },
+    {'id' : '3' , 'name' : 'Seasonal', 'direct' : '/SeasonalPage' },
+    {'id' : '4' , 'name' : 'Men' , 'direct' : MensWear},
+    {'id' : '5' , 'name' : 'Women' , 'direct' : WomenWear}
     
 
   ])

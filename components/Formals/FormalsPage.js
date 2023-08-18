@@ -15,6 +15,7 @@ const FormalsPage = ({ data }) => {
               <img src={item.image} alt="product1" />
               <h1 class="text-xl">{item.type}</h1>
               <p class="text-sm">{item.description}</p>
+              <button class='w-28 h-6 mt-3 bg-lime-400 rounded-lg'>Add to Cart</button>
             </div>
           ))}
         </div>
