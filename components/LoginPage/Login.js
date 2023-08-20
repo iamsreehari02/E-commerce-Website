@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import AuthDetails from '../../AuthDetails'
 
     const Login =() => {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
@@ -41,10 +41,7 @@ import AuthDetails from '../../AuthDetails'
             <br/>
             <button class=' text-xs text-light-red'>Forget password or email ?</button>
         </div>
-        <AuthDetails/>
-        
-
-      
+        <AuthDetails/>      
     </div>
   )
 

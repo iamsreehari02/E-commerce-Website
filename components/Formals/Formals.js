@@ -11,10 +11,10 @@ import { useState } from 'react';
 export default function Formals() {
 
     const [formalsData, onChange] = useState([
-        {'id' : 'Formals1' , 'image': FormalsProduct1 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt'},
-        {'id' : 'Formals2' , 'image': FormalsProduct2 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt'},
-        {'id' : 'Formals3' , 'image': FormalsProduct3 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt'},
-        {'id' : 'Formals4' , 'image': FormalsProduct4 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt'},
+        {'id' : 'Formals1' , 'image': FormalsProduct1 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt' , 'price' : 699},
+        {'id' : 'Formals2' , 'image': FormalsProduct2 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt' , 'price' : 699},
+        {'id' : 'Formals3' , 'image': FormalsProduct3 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt' , 'price' : 699},
+        {'id' : 'Formals4' , 'image': FormalsProduct4 , 'type' : 'Mssimo Dutti' , 'description' : 'Long Sleev Shirt' , 'price' : 699},
     ])
 
   return (

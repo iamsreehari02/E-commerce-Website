@@ -29,11 +29,10 @@ export default function Home() {
 
 
   const [productData, change] = useState([
-    { 'id' : '1' , 'image': Product1 , 'type' :'Men Closed' , 'description' : 'Dark blue'},
-    { 'id' : '2' , 'image': Product2 , 'type' : 'Overshirt' , 'description' : 'Browniess'},
-    { 'id' : '3' , 'image': Product3 , 'type' : 'Mngo Out Wear' , 'description' : 'Men'},
-    { 'id' : '4' , 'image': Product4 , 'type' : 'Hem Blouse', 'description' : 'Single Breasted Ruffle'},
-    
+    { 'id' : '1' , 'image': Product1 , 'type' :'Men Closed' , 'description' : 'Dark blue' , 'price' : 899},
+    { 'id' : '2' , 'image': Product2 , 'type' : 'Overshirt' , 'description' : 'Browniess' , 'price' : 1099},
+    { 'id' : '3' , 'image': Product3 , 'type' : 'Mngo Out Wear' , 'description' : 'Men' , 'price' : 599},
+    { 'id' : '4' , 'image': Product4 , 'type' : 'Hem Blouse', 'description' : 'Single Breasted Ruffle' , 'price' : 499},
   ])
 
 

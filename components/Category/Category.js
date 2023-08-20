@@ -15,7 +15,7 @@ const Category=({data}) => {
         <div class='h-44 w-2/3 ml-10 flex justify-between mt-14'>
             {data.map((item)=>(
                
-                <div class='h-12 w-18' key={item.id}>
+                <div class='h-12 w-18 hover:scale-95' key={item.id}>
                         
                         <button onClick={()=>handleClick(item.direct)} class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>{item.name}</button>
                 </div>

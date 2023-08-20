@@ -9,6 +9,7 @@ import Home from './components/HomePage/Home';
 import Formals from './components/Formals/Formals';
 import CasualsPage from './components/Casuals/CasualsPage';
 import SeasonalPage from './components/Seasonal/SeasonalPage';
+import CartItems from './components/CartComponent/CartItems'
 
 
 
@@ -25,7 +26,8 @@ function App() {
           {/* <Route path='/Category' element={<Category/>}/> */}
           <Route path='/FormalsPage' element={<Formals/>}/> 
           <Route path='/CasualsPage' element={<CasualsPage/>}/>    
-          <Route path='/SeasonalPage' element={<SeasonalPage/>}/>     
+          <Route path='/SeasonalPage' element={<SeasonalPage/>}/> 
+          <Route path='/CartItems' element={<CartItems/>}/>    
         </Routes>
         
       
