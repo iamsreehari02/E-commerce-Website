@@ -1,21 +1,34 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { auth } from "../../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import AuthDetails from "../../AuthDetails";
+import { useNavigate , useHistory} from "react-router-dom";
+import { auth} from "../../firebase";
+import { createUserWithEmailAndPassword,} from "firebase/auth";
+import { addDoc, collection, setDoc } from "firebase/firestore";
+// import AuthDetails from "../../AuthDetails";
+import { db } from "../../firebase";
+
 
 const Register = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name , setName] = useState();
+
+  
 
   const signup = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredentials) => console.log(userCredentials))
+      .then((userCredentials) => navigate('/Login'))
       .catch((error) => console.log(error));
+
+  
+      
+
+      const userDetails = collection(db , 'user')
+      addDoc(userDetails , {name , email})
   };
+ 
 
   return (
     <div class="h-screen w-screen bg-page-color">
@@ -24,13 +37,15 @@ const Register = () => {
       </div>
       <div class="text-center ">
         <form onSubmit={signup}>
-          <input type="text" required placeholder="First Name" />
+          <input type="text" required placeholder="First Name" id="name" value={name}
+          onChange={(e) => setName(e.target.value)}/>
           <br />
           <input class="mt-10" type="text" required placeholder="Last Name" />
           <br />
           <input
             class="mt-10"
             type="number"
+            id="number"
             required
             placeholder="Mobile Number"
           />
@@ -38,6 +53,7 @@ const Register = () => {
           <input
             class="mt-10"
             type="email"
+            id="email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -47,6 +63,7 @@ const Register = () => {
           <input
             class="mt-10"
             type="password"
+            id="password"
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -55,8 +72,8 @@ const Register = () => {
           <div>
             <button
               type="submit"
-              class="h-10 w-32 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl"
-            >
+              class="h-10 w-32 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl" id="submit"
+              >
               Confirm
             </button>
           </div>
@@ -66,3 +83,4 @@ const Register = () => {
   );
 };
 export default Register;
+

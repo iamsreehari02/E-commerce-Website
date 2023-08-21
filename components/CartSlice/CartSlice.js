@@ -1,7 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useEffect, useState } from "react";
+import { auth } from "../../firebase";
 
 
-const CartSlice = createSlice({
+
+
+    const CartSlice = createSlice({
 
     name: 'cart',
     initialState: {

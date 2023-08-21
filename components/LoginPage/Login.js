@@ -1,23 +1,26 @@
 import React, { useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import AuthDetails from '../../AuthDetails'
 
     const Login =() => {
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const [email , setEmail] = useState('')
     const [password , setPassword] = useState('')
 
+
     const login = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth , email , password)
-        .then((userCredentials) => console.log(userCredentials))
+        .then((userCredentials) => navigate('/home') )
         .catch((error) => console.log(error))
-
+        
+       
     }
+
 
   return (
     <div class='h-screen w-screen bg-page-color pt-20'>
@@ -35,7 +38,8 @@ import AuthDetails from '../../AuthDetails'
                 required placeholder='Password'/>
                 <br/>
                 <div >
-                    <button type='submit' class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'>Login</button>
+                    <button type='submit' class='h-10 w-28 ml-auto mr-auto bg-light-pink mt-10 rounded-2xl'
+                    >Login</button>
                 </div>
             </form>
             <br/>

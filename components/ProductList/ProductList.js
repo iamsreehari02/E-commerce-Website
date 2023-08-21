@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useDispatch, useSelector } from 'react-redux'
 import { addItem } from '../CartSlice/CartSlice'
+import { db } from "../../firebase";
+
 const ProductList = ({ data }) => {
     // console.log(data)
 
     const dispatch = useDispatch()
     const addProducts = (item) =>{
-        dispatch(addItem(item))
-        
+        dispatch(addItem(item))   
     }
+//     // const [userId , setUserId] = useState()
+//  db.collection('carts').add({
+// //   userId:  // Assuming you have a way to identify users
+//   items: {addProducts},
+// //   timestamp: firebase.firestore.FieldValue.serverTimestamp()
+// })
+
     return (
     <div>
         <div class='h-44 w-4/5 mt-12 ml-auto mr-auto grid grid-cols-4 gap-40'>
