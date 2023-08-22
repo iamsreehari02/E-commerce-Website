@@ -9,6 +9,8 @@ import MensWear from '../MensWear/MensWear'
 import Category from '../Category/Category'
 import WomenWear from '../WomenWear/WomenWear'
 import Header from '../Header/Header'
+import { auth } from '../../firebase'
+import { Toaster, toast } from 'react-hot-toast'
 
 
 
@@ -34,13 +36,18 @@ export default function Home() {
     { 'id' : '3' , 'image': Product3 , 'type' : 'Mngo Out Wear' , 'description' : 'Men' , 'price' : 599},
     { 'id' : '4' , 'image': Product4 , 'type' : 'Hem Blouse', 'description' : 'Single Breasted Ruffle' , 'price' : 499},
   ])
+  // if(auth){
+  //   toast.success('success')
+  // }
 
 
   return (
+    <>
     <div class='h-screen w-screen bg-page-color pt-16'>
       <div>
         {<Header/>}
       </div>
+      {/* <Toaster toastOptions={{duration:4000}}/> */}
         <div class='h-52 w-4/5 ml-auto mr-auto flex'>
           <div class='h-32 w-1/2 text-center align-middle mt-14'>
             <h1 class='text-6xl'>Fashion Trends</h1>
@@ -51,8 +58,7 @@ export default function Home() {
         <div>
           <ProductList data={productData} />
         </div>
-       
-        
     </div>
+    </>
   )
 }

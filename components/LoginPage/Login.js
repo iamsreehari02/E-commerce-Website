@@ -3,8 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import AuthDetails from '../../AuthDetails'
+import toast, { Toaster } from 'react-hot-toast';
 
     const Login =() => {
+
+    
 
     const navigate = useNavigate()
 
@@ -15,10 +18,11 @@ import AuthDetails from '../../AuthDetails'
     const login = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth , email , password)
-        .then((userCredentials) => navigate('/home') )
+        .then((userCredentials) => 
+        // toast.success('Signed Up successfully please login to homepage'),
+        navigate('/home')
+         )
         .catch((error) => console.log(error))
-        
-       
     }
 
 
@@ -29,6 +33,7 @@ import AuthDetails from '../../AuthDetails'
         </div>
         <div class='text-center'>
             <form onSubmit={login}>
+            {/* <Toaster toastOptions={{ duration:4000}}/> */}
                 <input type='email' value={email}  
                 onChange={(e) => setEmail(e.target.value)}
                 required placeholder ='Email'/>

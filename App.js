@@ -10,6 +10,7 @@ import Formals from './components/Formals/Formals';
 import CasualsPage from './components/Casuals/CasualsPage';
 import SeasonalPage from './components/Seasonal/SeasonalPage';
 import CartItems from './components/CartComponent/CartItems'
+import OtpVerify from './components/otpConfimation/OtpVerify';
 
 
 
@@ -27,7 +28,8 @@ function App() {
           <Route path='/FormalsPage' element={<Formals/>}/> 
           <Route path='/CasualsPage' element={<CasualsPage/>}/>    
           <Route path='/SeasonalPage' element={<SeasonalPage/>}/> 
-          <Route path='/CartItems' element={<CartItems/>}/>    
+          <Route path='/CartItems' element={<CartItems/>}/> 
+          <Route path='/OtpVerify' element={<OtpVerify/>}/>   
         </Routes>
         
       
